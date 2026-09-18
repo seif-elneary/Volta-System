@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="قسم المطعم - ڤولتا">
+
+    <title>المطعم | ڤولتا</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Sections CSS -->
+    <link rel="stylesheet" href="css/sections.css">
+
+    <!-- Cart CSS -->
+    <link rel="stylesheet" href="css/cart.css">
+
+    <!-- Global Responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">V</span>
+
+                <span class="logo-text">
+                    Volta
+                </span>
+
+            </a>
+
+
+            <div class="nav-actions">
+
+                <!-- Cart -->
+
+                <button type="button" class="cart-button" id="cartButton" aria-label="فتح السلة">
+
+                    🛒
+
+                    <span id="cartCount">
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- Theme -->
+
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="تغيير الوضع">
+
+                    🌙
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="section-page">
+
+        <div class="container">
+
+
+            <!-- Back -->
+
+            <a href="index.html" class="back-link">
+
+                <span class="back-icon">
+                    →
+                </span>
+
+                <span>
+                    العودة للرئيسية
+                </span>
+
+            </a>
+
+
+            <!-- =================================
+                 PAGE HEADER
+            ================================== -->
+
+            <section class="section-hero">
+
+                <div class="section-hero-content">
+
+                    <span class="section-label">
+                        VOLTA / RESTAURANT
+                    </span>
+
+                    <h1>
+                        قسم المطعم
+                    </h1>
+
+                    <p>
+                        اختار القسم ثم حدد المنتجات والكميات المطلوبة.
+                    </p>
+
+                </div>
+
+
+                <div class="section-hero-icon">
+                    🍽️
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 SUB SECTIONS
+            ================================== -->
+
+            <section class="sub-sections">
+
+                <button type="button" class="sub-section-card active" data-section="مخزن المطعم">
+
+                    <span class="sub-section-icon">
+                        📦
+                    </span>
+
+                    <span class="sub-section-content">
+
+                        <strong>
+                            مخزن المطعم
+                        </strong>
+
+                        <small>
+                            Restaurant Store
+                        </small>
+
+                    </span>
+
+                </button>
+
+
+                <button type="button" class="sub-section-card" data-section="مشتريات المطعم">
+
+                    <span class="sub-section-icon">
+                        🛒
+                    </span>
+
+                    <span class="sub-section-content">
+
+                        <strong>
+                            مشتريات المطعم
+                        </strong>
+
+                        <small>
+                            Restaurant Purchases
+                        </small>
+
+                    </span>
+
+                </button>
+
+            </section>
+
+
+            <!-- =================================
+                 PRODUCTS HEADER
+            ================================== -->
+
+            <section class="products-section">
+
+                <div class="products-header">
+
+                    <div>
+
+                        <span class="products-label">
+                            PRODUCTS
+                        </span>
+
+                        <h2 id="currentSection">
+                            مخزن المطعم
+                        </h2>
+
+                    </div>
+
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <span class="search-icon">
+                            🔍
+                        </span>
+
+                        <input type="search" id="productSearch" placeholder="ابحث عن منتج..." autocomplete="off">
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     PRODUCTS GRID
+                ================================== -->
+
+                <div id="productsGrid" class="products-grid">
+                </div>
+
+
+                <!-- Empty -->
+
+                <div id="emptyProducts" class="empty-products" hidden>
+
+                    <div class="empty-products-icon">
+                        🔍
+                    </div>
+
+                    <h3>
+                        لا توجد منتجات
+                    </h3>
+
+                    <p>
+                        لم نجد منتجًا مطابقًا للبحث.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+
+    </main>
+
+
+    <!-- =========================================
+         CART OVERLAY
+    ========================================== -->
+
+    <div id="cartOverlay">
+
+        <aside id="cartDrawer">
+
+
+            <!-- Cart Header -->
+
+            <div class="cart-header">
+
+                <div class="cart-header-info">
+
+                    <div class="cart-header-icon">
+                        🛒
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            السلة
+                        </h2>
+
+                        <p>
+                            المنتجات المطلوبة
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button id="cartClose" type="button" aria-label="إغلاق السلة">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <!-- Cart Items -->
+
+            <div id="cartItems"></div>
+
+
+            <!-- Cart Footer -->
+
+            <div class="cart-footer">
+
+                <div class="cart-total">
+
+                    <span class="cart-total-label">
+                        إجمالي الكميات
+                    </span>
+
+                    <span id="cartTotalItems" class="cart-total-number">
+
+                        0
+
+                    </span>
+
+                </div>
+
+
+                <button id="sendOrder" type="button">
+
+                    📱 إرسال الطلب
+
+                </button>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <!-- =========================================
+         TOAST
+    ========================================== -->
+
+    <div id="toast"></div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+    <script src="js/section-auth.js"></script>
+    <!-- Restaurant Products -->
+    <script src="js/products/restaurant.js"></script>
+
+    <!-- Cart -->
+    <script src="js/cart.js"></script>
+
+    <!-- WhatsApp -->
+    <script src="js/whatsapp.js"></script>
+
+    <!-- Restaurant App -->
+    <script src="js/restaurant.js"></script>
+
+    <!-- Global Theme -->
+    <script src="js/theme.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+/* =========================
+   HERO IMAGE FIX
+========================= */
+
+.hero {
+    position: relative;
+    background-image: url("../assets/hero.webp") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1 !important;
+}
+
+
+/* Overlay خفيف بدل اللون الغامق */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15) !important;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}

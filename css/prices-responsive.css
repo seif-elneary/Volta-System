@@ -1,0 +1,542 @@
+/* =========================================
+   VOLTA - PRICES RESPONSIVE
+   Responsive styles for prices.html only
+========================================= */
+
+
+/* =========================================
+   TABLET / SMALL DESKTOP
+========================================= */
+
+@media (max-width: 1100px) {
+    .prices-page {
+        padding-top: 26px;
+    }
+    .prices-hero {
+        padding: 27px 28px;
+    }
+    .prices-card {
+        width: 100%;
+        padding: 22px;
+    }
+    .section-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .prices-hero {
+        min-height: 190px;
+    }
+    .prices-hero-icon {
+        width: 82px;
+        height: 82px;
+        border-radius: 22px;
+        font-size: 35px;
+    }
+    .prices-card {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
+
+@media (max-width: 768px) {
+    .prices-page {
+        min-height: calc(100vh - 70px);
+        padding: 22px 0 45px;
+        overflow-x: hidden;
+    }
+    .prices-page .back-link {
+        margin-bottom: 18px;
+        padding: 8px 12px 8px 8px;
+        font-size: 11px;
+    }
+    .prices-page .back-icon {
+        width: 27px;
+        height: 27px;
+        font-size: 14px;
+    }
+    /* Hero */
+    .prices-hero {
+        width: 100%;
+        min-height: 0;
+        padding: 24px;
+        gap: 20px;
+        border-radius: 20px;
+    }
+    .prices-hero-content {
+        width: 100%;
+        min-width: 0;
+    }
+    .prices-hero h1 {
+        font-size: 34px;
+        word-break: normal;
+    }
+    .prices-hero p {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+    .prices-hero-features {
+        gap: 6px;
+        margin-top: 14px;
+    }
+    .prices-hero-features span {
+        min-height: 28px;
+        padding: 5px 9px;
+        font-size: 9px;
+    }
+    .prices-hero-icon {
+        width: 76px;
+        height: 76px;
+        border-radius: 20px;
+        font-size: 31px;
+    }
+    /* Main Card */
+    .prices-card {
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .prices-card-top {
+        gap: 12px;
+        padding-bottom: 17px;
+        margin-bottom: 19px;
+    }
+    .prices-card-icon {
+        width: 49px;
+        height: 49px;
+        border-radius: 14px;
+        font-size: 21px;
+    }
+    .prices-card-top h2 {
+        font-size: 18px;
+    }
+    .prices-card-top p {
+        font-size: 10px;
+    }
+    /* Section Options */
+    .section-options {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+    .section-option {
+        min-width: 0;
+    }
+    .section-option-content {
+        width: 100%;
+        min-height: 72px;
+        padding: 10px;
+        gap: 9px;
+        border-radius: 13px;
+    }
+    .section-option-icon {
+        width: 37px;
+        height: 37px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+    .section-option strong {
+        font-size: 11px;
+    }
+    .section-option small {
+        font-size: 8px;
+    }
+    /* Labels */
+    .label-row {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    /* Textarea */
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        min-height: 175px;
+        padding: 13px;
+        border-radius: 13px;
+        font-size: 12px;
+    }
+    /* Submit */
+    .prices-submit {
+        width: 100%;
+        min-height: 57px;
+        border-radius: 13px;
+    }
+    .send-icon {
+        width: 39px;
+        height: 39px;
+        border-radius: 10px;
+    }
+    .send-icon svg {
+        width: 19px;
+        height: 19px;
+    }
+    .send-content strong {
+        font-size: 13px;
+    }
+    .send-content small {
+        font-size: 8px;
+    }
+    .send-arrow {
+        font-size: 19px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+    .prices-page {
+        padding: 18px 0 35px;
+    }
+    /* Hero */
+    .prices-hero {
+        display: block;
+        width: 100%;
+        padding: 21px;
+        border-radius: 18px;
+    }
+    .prices-hero-content {
+        width: 100%;
+    }
+    .prices-hero h1 {
+        margin-top: 6px;
+        font-size: 29px;
+    }
+    .prices-hero p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+    .prices-hero-features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        margin-top: 13px;
+    }
+    .prices-hero-features span {
+        width: 100%;
+        justify-content: center;
+        min-height: 29px;
+        padding: 5px 7px;
+        font-size: 8px;
+        text-align: center;
+    }
+    .prices-hero-icon {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        width: 54px;
+        height: 54px;
+        border-radius: 15px;
+        font-size: 25px;
+    }
+    /* Card */
+    .prices-card {
+        width: 100%;
+        padding: 16px;
+        border-radius: 18px;
+    }
+    .prices-card-top {
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 15px;
+        margin-bottom: 17px;
+    }
+    .prices-card-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 19px;
+    }
+    .prices-card-label {
+        font-size: 8px;
+    }
+    .prices-card-top h2 {
+        margin-bottom: 2px;
+        font-size: 16px;
+    }
+    .prices-card-top p {
+        font-size: 9px;
+    }
+    /* Form */
+    .prices-form {
+        gap: 18px;
+    }
+    .form-group {
+        gap: 7px;
+    }
+    .form-group>label,
+    .label-row label {
+        font-size: 12px;
+    }
+    .label-row span {
+        font-size: 8px;
+    }
+    /* Section Options */
+    .section-options {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+    .section-option-content {
+        min-height: 68px;
+        padding: 8px;
+        gap: 7px;
+        border-radius: 12px;
+    }
+    .section-option-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        font-size: 15px;
+    }
+    .section-option strong {
+        font-size: 10px;
+    }
+    .section-option small {
+        font-size: 7px;
+    }
+    /* Textarea */
+    .form-group textarea {
+        min-height: 160px;
+        padding: 12px;
+        border-radius: 12px;
+        font-size: 11px;
+        line-height: 1.8;
+    }
+    .textarea-hint {
+        font-size: 8px;
+    }
+    /* Submit Button */
+    .prices-submit {
+        min-height: 54px;
+        padding: 7px 10px;
+        gap: 8px;
+        border-radius: 12px;
+    }
+    .send-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 9px;
+    }
+    .send-icon svg {
+        width: 17px;
+        height: 17px;
+    }
+    .send-content strong {
+        font-size: 12px;
+    }
+    .send-content small {
+        font-size: 7px;
+    }
+    .send-arrow {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+    .prices-page {
+        padding-top: 15px;
+    }
+    .prices-page .back-link {
+        margin-bottom: 14px;
+        padding: 7px 10px 7px 7px;
+        font-size: 10px;
+    }
+    .prices-page .back-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+    /* Hero */
+    .prices-hero {
+        padding: 18px;
+        border-radius: 16px;
+    }
+    .prices-hero h1 {
+        font-size: 25px;
+    }
+    .prices-hero p {
+        font-size: 11px;
+    }
+    .prices-hero-features {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .prices-hero-features span {
+        width: fit-content;
+        min-height: 26px;
+        padding: 4px 8px;
+        font-size: 7px;
+    }
+    .prices-hero-icon {
+        top: 14px;
+        left: 14px;
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        font-size: 21px;
+    }
+    /* Card */
+    .prices-card {
+        padding: 13px;
+        border-radius: 16px;
+    }
+    .prices-card-top {
+        gap: 8px;
+        padding-bottom: 13px;
+        margin-bottom: 15px;
+    }
+    .prices-card-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+    .prices-card-top h2 {
+        font-size: 14px;
+    }
+    .prices-card-top p {
+        font-size: 8px;
+    }
+    /* Sections */
+    .section-options {
+        gap: 5px;
+    }
+    .section-option-content {
+        min-height: 62px;
+        padding: 7px;
+        gap: 6px;
+    }
+    .section-option-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+    .section-option strong {
+        font-size: 9px;
+    }
+    .section-option small {
+        font-size: 6px;
+    }
+    /* Textarea */
+    .form-group textarea {
+        min-height: 145px;
+        font-size: 10px;
+    }
+    /* Button */
+    .prices-submit {
+        min-height: 50px;
+        padding: 6px 8px;
+    }
+    .send-icon {
+        width: 33px;
+        height: 33px;
+    }
+    .send-content strong {
+        font-size: 11px;
+    }
+    .send-content small {
+        font-size: 6px;
+    }
+    .send-arrow {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 330px) {
+    .prices-hero {
+        padding: 16px;
+    }
+    .prices-hero h1 {
+        font-size: 22px;
+    }
+    .prices-hero p {
+        font-size: 10px;
+    }
+    .prices-hero-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 18px;
+    }
+    .prices-card {
+        padding: 11px;
+    }
+    .section-options {
+        gap: 5px;
+    }
+    .section-option-content {
+        padding: 6px;
+    }
+    .section-option-icon {
+        width: 27px;
+        height: 27px;
+        font-size: 12px;
+    }
+    .section-option strong {
+        font-size: 8px;
+    }
+    .section-option small {
+        font-size: 5.5px;
+    }
+    .form-group textarea {
+        min-height: 130px;
+        padding: 10px;
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media (hover: none) and (pointer: coarse) {
+    .prices-card:hover,
+    .section-option:hover .section-option-content,
+    .prices-page .back-link:hover {
+        transform: none;
+    }
+    .prices-submit {
+        min-height: 56px;
+    }
+    .section-option-content {
+        min-height: 70px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .prices-page *,
+    .prices-page *::before,
+    .prices-page *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}

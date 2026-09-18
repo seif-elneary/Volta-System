@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Volta | تسجيل الدخول</title>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-card">
+
+            <!-- Logo -->
+            <div class="login-logo">
+                <div class="logo-mark">V</div>
+
+                <div class="logo-info">
+                    <h1>Volta</h1>
+                    <span>VOLTA SYSTEM</span>
+                </div>
+            </div>
+
+
+            <!-- Header -->
+            <div class="login-header">
+
+                <span class="login-label">
+                    INTERNAL SYSTEM
+                </span>
+
+                <h2>
+                    تسجيل الدخول
+                </h2>
+
+                <p>
+                    أدخل بيانات الدخول للوصول إلى نظام ڤولتا
+                </p>
+
+            </div>
+
+
+            <!-- Form -->
+            <form id="loginForm">
+
+                <!-- Username -->
+                <div class="form-group">
+
+                    <label for="username">
+                        اسم المستخدم
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            👤
+                        </span>
+
+                        <input type="text" id="username" placeholder="أدخل اسم المستخدم" autocomplete="username" required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="password">
+                        كلمة المرور
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            🔒
+                        </span>
+
+                        <input type="password" id="password" placeholder="أدخل كلمة المرور" autocomplete="current-password" required>
+
+                        <button type="button" class="password-toggle" id="passwordToggle">
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Error -->
+                <div class="login-error" id="loginError">
+                    اسم المستخدم أو كلمة المرور غير صحيحة
+                </div>
+
+
+                <!-- Button -->
+                <button type="submit" class="login-button" id="loginButton">
+
+                    <span>
+                        دخول إلى النظام
+                    </span>
+
+                    <span class="button-arrow">
+                        ←
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <!-- Footer -->
+            <div class="login-footer">
+
+                <span>VOLTA</span>
+
+                <span>•</span>
+
+                <span>
+                    Internal Ordering System
+                </span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
