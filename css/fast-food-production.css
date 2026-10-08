@@ -1,0 +1,1038 @@
+/* =========================================
+   VOLTA - FAST FOOD PRODUCTION
+========================================= */
+
+:root {
+    --production-primary: #f59e0b;
+    --production-primary-dark: #d97706;
+    --production-bg: #f5f7fa;
+    --production-card: #ffffff;
+    --production-text: #172033;
+    --production-muted: #7a8496;
+    --production-border: #e5e9f0;
+    --production-success: #16a34a;
+    --production-danger: #dc2626;
+    --production-shadow: 0 10px 30px rgba(40, 60, 80, 0.07);
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.production-page {
+    min-height: 100vh;
+    background: var(--production-bg);
+    color: var(--production-text);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.production-container {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 45px 0 70px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.production-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.production-header .header-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: linear-gradient( 135deg, var(--production-primary), var(--production-primary-dark));
+    font-size: 34px;
+    box-shadow: 0 12px 30px rgba(245, 158, 11, 0.25);
+}
+
+.production-header .header-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--production-primary-dark);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.production-header h1 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    color: var(--production-text);
+}
+
+.production-header p {
+    margin: 12px auto 0;
+    max-width: 600px;
+    color: var(--production-muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   PRODUCTION CARD
+========================================= */
+
+.production-card {
+    background: var(--production-card);
+    border: 1px solid var(--production-border);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: var(--production-shadow);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.production-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--production-border);
+}
+
+.production-card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.production-card-title .title-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(245, 158, 11, 0.12);
+    font-size: 22px;
+}
+
+.production-card-title h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.production-card-title span {
+    display: block;
+    margin-top: 3px;
+    color: var(--production-muted);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PRODUCTS LIST
+========================================= */
+
+.production-products {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================================
+   PRODUCT ROW
+========================================= */
+
+.production-product {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 72px;
+    padding: 12px 16px;
+    border: 1px solid var(--production-border);
+    border-radius: 16px;
+    background: #fafbfc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.production-product:hover {
+    border-color: rgba(245, 158, 11, 0.45);
+    box-shadow: 0 6px 18px rgba(40, 60, 80, 0.06);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   PRODUCT NUMBER
+========================================= */
+
+.product-number {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--production-primary-dark);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.product-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-name {
+    margin: 0;
+    color: var(--production-text);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   QUANTITY AREA
+========================================= */
+
+.quantity-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.quantity-label {
+    color: var(--production-muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   QUANTITY INPUT
+========================================= */
+
+.production-quantity {
+    width: 100px;
+    height: 46px;
+    padding: 0 12px;
+    border: 1px solid var(--production-border);
+    border-radius: 12px;
+    outline: none;
+    background: #ffffff;
+    color: var(--production-text);
+    font-size: 17px;
+    font-weight: 800;
+    text-align: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.production-quantity:focus {
+    border-color: var(--production-primary);
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.12);
+}
+
+.production-quantity::-webkit-inner-spin-button,
+.production-quantity::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+
+/* =========================================
+   ADD PRODUCT
+========================================= */
+
+.add-product-section {
+    margin-top: 20px;
+}
+
+.add-product-button {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px dashed rgba(245, 158, 11, 0.65);
+    border-radius: 15px;
+    background: rgba(245, 158, 11, 0.05);
+    color: var(--production-primary-dark);
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-product-button:hover {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: var(--production-primary);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CUSTOM PRODUCT
+========================================= */
+
+.custom-product {
+    background: #fffaf0;
+    border-color: rgba(245, 158, 11, 0.25);
+}
+
+.custom-product-input {
+    flex: 1;
+    min-width: 0;
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid var(--production-border);
+    border-radius: 12px;
+    outline: none;
+    background: #ffffff;
+    color: var(--production-text);
+    font-size: 15px;
+}
+
+.custom-product-input:focus {
+    border-color: var(--production-primary);
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+}
+
+
+/* =========================================
+   REMOVE PRODUCT
+========================================= */
+
+.remove-product {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 11px;
+    background: rgba(220, 38, 38, 0.08);
+    color: var(--production-danger);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.remove-product:hover {
+    background: rgba(220, 38, 38, 0.14);
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   TOTAL
+========================================= */
+
+.production-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 17px;
+    background: linear-gradient( 135deg, rgba(245, 158, 11, 0.08), rgba(245, 158, 11, 0.03));
+    border: 1px solid rgba(245, 158, 11, 0.16);
+}
+
+.summary-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--production-muted);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.summary-total {
+    color: var(--production-primary-dark);
+    font-size: 25px;
+    font-weight: 900;
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.production-note {
+    margin-top: 22px;
+}
+
+.production-note label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--production-text);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.production-note textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 14px;
+    resize: vertical;
+    border: 1px solid var(--production-border);
+    border-radius: 14px;
+    outline: none;
+    background: #ffffff;
+    color: var(--production-text);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.production-note textarea:focus {
+    border-color: var(--production-primary);
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.production-send {
+    width: 100%;
+    min-height: 58px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient( 135deg, var(--production-primary), var(--production-primary-dark));
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.production-send:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(245, 158, 11, 0.28);
+}
+
+.production-send:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark-mode .production-page {
+    --production-bg: #0f172a;
+    --production-card: #172033;
+    --production-text: #f8fafc;
+    --production-muted: #94a3b8;
+    --production-border: #293548;
+}
+
+.dark-mode .production-product {
+    background: #111a2b;
+}
+
+.dark-mode .production-quantity,
+.dark-mode .production-note textarea,
+.dark-mode .custom-product-input {
+    background: #111a2b;
+    color: var(--production-text);
+    border-color: var(--production-border);
+}
+
+.dark-mode .custom-product {
+    background: rgba(245, 158, 11, 0.05);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+    .production-container {
+        width: min(100% - 30px, 800px);
+        padding-top: 35px;
+    }
+    .production-card {
+        padding: 22px;
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+    .production-container {
+        width: calc(100% - 24px);
+        padding: 28px 0 50px;
+    }
+    .production-header {
+        margin-bottom: 25px;
+    }
+    .production-header .header-icon {
+        width: 62px;
+        height: 62px;
+        border-radius: 18px;
+        font-size: 29px;
+    }
+    .production-header h1 {
+        font-size: 28px;
+    }
+    .production-card {
+        padding: 17px;
+        border-radius: 20px;
+    }
+    .production-card-header {
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+    }
+    .production-card-title h2 {
+        font-size: 18px;
+    }
+    .production-product {
+        gap: 10px;
+        min-height: 66px;
+        padding: 10px 11px;
+        border-radius: 14px;
+    }
+    .product-number {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        font-size: 11px;
+    }
+    .product-name {
+        font-size: 14px;
+    }
+    .quantity-label {
+        display: none;
+    }
+    .production-quantity {
+        width: 82px;
+        height: 42px;
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+    .production-container {
+        width: calc(100% - 16px);
+        padding: 20px 0 35px;
+    }
+    .production-header {
+        margin-bottom: 20px;
+    }
+    .production-header .header-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 12px;
+        border-radius: 16px;
+        font-size: 26px;
+    }
+    .production-header .header-label {
+        font-size: 12px;
+    }
+    .production-header h1 {
+        font-size: 24px;
+    }
+    .production-header p {
+        margin-top: 8px;
+        font-size: 13px;
+    }
+    .production-card {
+        padding: 13px;
+        border-radius: 18px;
+    }
+    .production-card-header {
+        gap: 10px;
+    }
+    .production-card-title {
+        gap: 9px;
+    }
+    .production-card-title .title-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+        font-size: 18px;
+    }
+    .production-card-title h2 {
+        font-size: 16px;
+    }
+    .production-card-title span {
+        font-size: 10px;
+    }
+    .production-products {
+        gap: 8px;
+    }
+    .production-product {
+        gap: 8px;
+        min-height: 60px;
+        padding: 8px;
+        border-radius: 12px;
+    }
+    .product-number {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        font-size: 10px;
+    }
+    .product-name {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    .production-quantity {
+        width: 70px;
+        height: 38px;
+        padding: 0 6px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+    .remove-product {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        font-size: 16px;
+    }
+    .custom-product-input {
+        width: 100%;
+        height: 38px;
+        font-size: 13px;
+    }
+    .production-summary {
+        margin-top: 17px;
+        padding: 15px;
+        border-radius: 13px;
+    }
+    .summary-label {
+        font-size: 12px;
+    }
+    .summary-total {
+        font-size: 21px;
+    }
+    .production-note {
+        margin-top: 17px;
+    }
+    .production-note label {
+        font-size: 13px;
+    }
+    .production-note textarea {
+        min-height: 85px;
+        padding: 11px;
+        font-size: 13px;
+    }
+    .production-send {
+        min-height: 52px;
+        margin-top: 18px;
+        border-radius: 13px;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+    .production-container {
+        width: calc(100% - 12px);
+    }
+    .production-card {
+        padding: 10px;
+    }
+    .production-product {
+        gap: 6px;
+        padding: 7px;
+    }
+    .product-number {
+        width: 27px;
+        height: 27px;
+        font-size: 9px;
+    }
+    .product-name {
+        font-size: 12px;
+    }
+    .production-quantity {
+        width: 62px;
+        height: 36px;
+        font-size: 14px;
+    }
+    .remove-product {
+        width: 31px;
+        height: 31px;
+    }
+}
+
+
+/* =========================================
+   VOLTA - FAST FOOD PRODUCTION
+   DARK MODE
+========================================= */
+
+.dark-mode .production-page {
+    background: #0f1117;
+    color: #f3f4f6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.dark-mode .production-header {
+    background: #171a21;
+    border-color: #2a2f3a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode .header-icon {
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+}
+
+.dark-mode .header-label {
+    color: #f59e0b;
+}
+
+.dark-mode .production-header h1 {
+    color: #ffffff;
+}
+
+.dark-mode .production-header p {
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.dark-mode .production-card {
+    background: #171a21;
+    border-color: #2a2f3a;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.dark-mode .production-card-header {
+    border-bottom-color: #2a2f3a;
+}
+
+.dark-mode .production-card-title {
+    color: #ffffff;
+}
+
+.dark-mode .production-card-title .title-icon {
+    color: #f59e0b;
+}
+
+.dark-mode .production-card-header p {
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   PRODUCT ROW
+========================================= */
+
+.dark-mode .production-product {
+    background: #1d212a;
+    border-color: #2a2f3a;
+}
+
+.dark-mode .production-product:hover {
+    border-color: rgba(245, 158, 11, 0.55);
+    background: #20252f;
+}
+
+
+/* =========================================
+   PRODUCT NUMBER
+========================================= */
+
+.dark-mode .product-number {
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+}
+
+
+/* =========================================
+   PRODUCT NAME
+========================================= */
+
+.dark-mode .product-name {
+    color: #f3f4f6;
+}
+
+.dark-mode .quantity-label {
+    color: #9ca3af;
+}
+
+
+/* =========================================
+   QUANTITY INPUT
+========================================= */
+
+.dark-mode .production-quantity {
+    background: #11141a;
+    color: #ffffff;
+    border-color: #343a46;
+}
+
+.dark-mode .production-quantity:focus {
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
+}
+
+
+/* =========================================
+   CUSTOM PRODUCT INPUT
+========================================= */
+
+.dark-mode .custom-product-input {
+    background: #11141a;
+    color: #ffffff;
+    border-color: #343a46;
+}
+
+.dark-mode .custom-product-input::placeholder {
+    color: #6b7280;
+}
+
+.dark-mode .custom-product-input:focus {
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
+}
+
+
+/* =========================================
+   REMOVE BUTTON
+========================================= */
+
+.dark-mode .remove-product {
+    background: rgba(220, 38, 38, 0.12);
+    color: #f87171;
+    border-color: rgba(220, 38, 38, 0.2);
+}
+
+.dark-mode .remove-product:hover {
+    background: rgba(220, 38, 38, 0.2);
+    color: #ef4444;
+}
+
+
+/* =========================================
+   ADD PRODUCT
+========================================= */
+
+.dark-mode .add-product-section {
+    border-top-color: #2a2f3a;
+}
+
+.dark-mode .add-product-button {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.35);
+}
+
+.dark-mode .add-product-button:hover {
+    background: #f59e0b;
+    color: #111827;
+    border-color: #f59e0b;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.dark-mode .production-summary {
+    background: #11141a;
+    border-color: #2a2f3a;
+}
+
+.dark-mode .summary-label {
+    color: #9ca3af;
+}
+
+.dark-mode .summary-total {
+    color: #f59e0b;
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.dark-mode .production-note {
+    background: #11141a;
+    color: #ffffff;
+    border-color: #343a46;
+}
+
+.dark-mode .production-note::placeholder {
+    color: #6b7280;
+}
+
+.dark-mode .production-note:focus {
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.dark-mode .production-send {
+    background: #f59e0b;
+    color: #111827;
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.18);
+}
+
+.dark-mode .production-send:hover {
+    background: #d97706;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   MOBILE DARK MODE
+========================================= */
+
+@media (max-width: 700px) {
+    .dark-mode .production-product {
+        background: #1d212a;
+    }
+    .dark-mode .production-quantity {
+        background: #11141a;
+    }
+    .dark-mode .custom-product-input {
+        background: #11141a;
+    }
+}
+
+
+/* =========================================
+   PRODUCTION NAVBAR ACTIONS
+========================================= */
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* =========================================
+   EXIT BUTTON
+========================================= */
+
+.production-exit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 42px;
+    padding: 0 15px;
+    border: 1px solid #e5e9f0;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #172033;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.production-exit span:first-child {
+    font-size: 18px;
+}
+
+.production-exit:hover {
+    background: #f59e0b;
+    border-color: #f59e0b;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark-mode .production-exit {
+    background: #171a21;
+    border-color: #2a2f3a;
+    color: #f3f4f6;
+}
+
+.dark-mode .production-exit:hover {
+    background: #f59e0b;
+    border-color: #f59e0b;
+    color: #111827;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+    .navbar-actions {
+        gap: 6px;
+    }
+    .production-exit {
+        width: 42px;
+        padding: 0;
+    }
+    .production-exit span:last-child {
+        display: none;
+    }
+}

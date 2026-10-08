@@ -1,0 +1,32 @@
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background-image: url("../assets/hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 320px;
+        background-position: center;
+    }
+    .hero-content {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 260px;
+    }
+    .hero-content {
+        min-height: 260px;
+    }
+}

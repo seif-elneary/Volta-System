@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#f59e0b">
+
+    <title>
+        Volta | تصنيع Fast Food
+    </title>
+
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/fast-food-production.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+
+<body class="production-page">
+
+
+    <!-- =========================
+         Navbar
+    ========================== -->
+
+    <!-- =========================
+     Navbar
+========================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                V
+            </span>
+
+                <span class="logo-text">
+                Volta
+            </span>
+
+            </a>
+
+
+            <!-- Navbar Actions -->
+
+            <div class="navbar-actions">
+
+                <!-- Exit -->
+
+                <a href="index.html" class="production-exit">
+                    <span>↩</span>
+                    <span>خروج</span>
+                </a>
+
+
+                <!-- Theme -->
+
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="تفعيل الوضع الداكن">
+                🌙
+            </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =========================
+         Main
+    ========================== -->
+
+    <main>
+
+        <div class="production-container">
+
+
+            <!-- =========================
+                 Page Header
+            ========================== -->
+
+            <section class="production-header">
+
+                <div class="header-icon">
+                    🍔
+                </div>
+
+                <span class="header-label">
+                    VOLTA PRODUCTION
+                </span>
+
+                <h1>
+                    تصنيع Fast Food
+                </h1>
+
+                <p>
+                    تسجيل الكميات المصنعة اليوم وإرسال التقرير بالكامل
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 Production Card
+            ========================== -->
+
+            <section class="production-card">
+
+
+                <!-- Card Header -->
+
+                <div class="production-card-header">
+
+                    <div class="production-card-title">
+
+                        <div class="title-icon">
+                            📦
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                الكميات المصنعة
+                            </h2>
+
+                            <span>
+                                أدخل الكمية المصنعة لكل منتج
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     Products
+                ========================== -->
+
+                <div class="production-products" id="productionProducts">
+
+
+                    <!-- 01 -->
+
+                    <div class="production-product" data-product="بيتزا">
+
+                        <div class="product-number">
+                            01
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍕 بيتزا
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 02 -->
+
+                    <div class="production-product" data-product="مكسيكي">
+
+                        <div class="product-number">
+                            02
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🌮 مكسيكي
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 03 -->
+
+                    <div class="production-product" data-product="استربس حار">
+
+                        <div class="product-number">
+                            03
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍗 استربس حار
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 04 -->
+
+                    <div class="production-product" data-product="استربس عادي">
+
+                        <div class="product-number">
+                            04
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍗 استربس عادي
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 05 -->
+
+                    <div class="production-product" data-product="فيليه حار">
+
+                        <div class="product-number">
+                            05
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍗 فيليه حار
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 06 -->
+
+                    <div class="production-product" data-product="فيليه عادي">
+
+                        <div class="product-number">
+                            06
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍗 فيليه عادي
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 07 -->
+
+                    <div class="production-product" data-product="قطع فريد حار">
+
+                        <div class="product-number">
+                            07
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍗 قطع فريد حار
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 08 -->
+
+                    <div class="production-product" data-product="قطع فريد عادي">
+
+                        <div class="product-number">
+                            08
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍗 قطع فريد عادي
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 09 -->
+
+                    <div class="production-product" data-product="برجر بينق برجر">
+
+                        <div class="product-number">
+                            09
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍔برجر بيف صغير
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 10 -->
+
+                    <div class="production-product" data-product="هاي بينق برجر">
+
+                        <div class="product-number">
+                            10
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍔برجر بيف كبير
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 11 -->
+
+                    <div class="production-product" data-product="تومية">
+
+                        <div class="product-number">
+                            11
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🧄 تومية
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 12 -->
+
+                    <div class="production-product" data-product="كلوسلوه">
+
+                        <div class="product-number">
+                            12
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🥗 كلوسلوه
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- 13 -->
+
+                    <div class="production-product" data-product="صلصة بيتزا">
+
+                        <div class="product-number">
+                            13
+                        </div>
+
+                        <div class="product-info">
+
+                            <p class="product-name">
+                                🍅 صلصة بيتزا
+                            </p>
+
+                        </div>
+
+                        <div class="quantity-area">
+
+                            <span class="quantity-label">
+                                الكمية
+                            </span>
+
+                            <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <!-- 14 -->
+
+                <div class="production-product" data-product="استربس خام">
+
+                    <div class="product-number">
+                        14
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-name">
+                            🍗 استربس خام
+                        </p>
+
+                    </div>
+
+                    <div class="quantity-area">
+
+                        <span class="quantity-label">
+                            الكمية
+                        </span>
+
+                        <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                    </div>
+
+                </div>
+
+
+                <!-- 15 -->
+
+                <div class="production-product" data-product="فليه خام +">
+
+                    <div class="product-number">
+                        15
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-name">
+                            🍗 فليه خام
+                        </p>
+
+                    </div>
+
+                    <div class="quantity-area">
+
+                        <span class="quantity-label">
+                            الكمية
+                        </span>
+
+                        <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                    </div>
+
+                </div>
+
+
+                <!-- 16 -->
+
+                <div class="production-product" data-product="شريمب حار">
+
+                    <div class="product-number">
+                        16
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-name">
+                            🍤 شريمب حار
+                        </p>
+
+                    </div>
+
+                    <div class="quantity-area">
+
+                        <span class="quantity-label">
+                            الكمية
+                        </span>
+
+                        <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                    </div>
+
+                </div>
+
+
+                <!-- 17 -->
+
+                <div class="production-product" data-product="شريمب عادي">
+
+                    <div class="product-number">
+                        17
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-name">
+                            🍤 شريمب عادي
+                        </p>
+
+                    </div>
+
+                    <div class="quantity-area">
+
+                        <span class="quantity-label">
+                            الكمية
+                        </span>
+
+                        <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                    </div>
+
+                </div>
+
+
+                <!-- 18 -->
+
+                <div class="production-product" data-product="قطع فريد خام">
+
+                    <div class="product-number">
+                        18
+                    </div>
+
+                    <div class="product-info">
+
+                        <p class="product-name">
+                            🍗 قطع فريد خام
+                        </p>
+
+                    </div>
+
+                    <div class="quantity-area">
+
+                        <span class="quantity-label">
+                            الكمية
+                        </span>
+
+                        <input type="number" class="production-quantity" min="0" value="0" inputmode="numeric">
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     Add Custom Product
+                ========================== -->
+
+                <div class="add-product-section">
+
+                    <button type="button" class="add-product-button" id="addProductionProduct">
+
+                        <span>
+                            ＋
+                        </span>
+
+                        <span>
+                            إضافة منتج آخر
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =========================
+                     Total
+                ========================== -->
+
+                <div class="production-summary">
+
+                    <div class="summary-label">
+
+                        <span>
+                            📊
+                        </span>
+
+                        <span>
+                            إجمالي الكميات المصنعة
+                        </span>
+
+                    </div>
+
+                    <div class="summary-total" id="productionTotal">
+                        0
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     Note
+                ========================== -->
+
+                <div class="production-note">
+
+                    <label for="productionNote">
+                        📝 ملاحظات إضافية
+                    </label>
+
+                    <textarea id="productionNote" placeholder="اكتب أي ملاحظات خاصة بالتصنيع..."></textarea>
+
+                </div>
+
+
+
+                <!-- =========================
+                     Send
+                ========================== -->
+
+                <button type="button" class="production-send" id="sendProductionReport">
+
+                    <span>
+                        إرسال تقرير التصنيع عبر واتساب
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </button>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         JavaScript
+    ========================== -->
+
+    <script src="js/fast-food-production.js"></script>
+
+    <script src="js/theme.js"></script>
+
+
+</body>
+
+</html>

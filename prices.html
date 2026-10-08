@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="إرسال وتحديث أسعار المنتجات إلى ڤولتا عبر WhatsApp">
+
+    <meta name="theme-color" content="#4f7ea8">
+
+    <title>إرسال الأسعار | ڤولتا</title>
+
+
+    <!-- =====================================
+         GOOGLE FONT
+    ====================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+    <!-- =====================================
+         PWA
+    ====================================== -->
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <meta name="apple-mobile-web-app-title" content="Volta">
+
+    <link rel="apple-touch-icon" href="assets/icons/volta-180.png">
+
+    <link rel="icon" type="image/png" href="assets/icons/volta-192.png">
+
+
+    <!-- =====================================
+         CSS
+    ====================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/prices.css">
+
+    <link rel="stylesheet" href="css/cart.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/prices-responsive.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-mark">
+                    V
+                </span>
+
+                <span class="logo-text">
+                    Volta
+                </span>
+
+            </a>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+
+                <!-- CART -->
+
+                <button type="button" class="cart-button" id="cartButton" aria-label="فتح السلة">
+
+                    🛒
+
+                    <span id="cartCount">
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- DARK MODE -->
+
+                <button type="button" class="theme-toggle" id="themeToggle" aria-label="تغيير الوضع">
+
+                    🌙
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main class="prices-page">
+
+        <div class="container">
+
+
+            <!-- =================================
+                 BACK BUTTON
+            ================================== -->
+
+            <a href="index.html" class="back-link">
+
+                <span class="back-icon">
+                    →
+                </span>
+
+                <span>
+                    العودة للرئيسية
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================
+                 PAGE HERO
+            ================================== -->
+
+            <section class="prices-hero">
+
+
+                <div class="prices-hero-content">
+
+                    <span class="section-label">
+                        VOLTA / PRICES
+                    </span>
+
+
+                    <h1>
+                        إرسال الأسعار
+                    </h1>
+
+
+                    <p>
+                        أرسل أسعار المنتجات أو أي تحديث جديد بسهولة، وسيتم استلام البيانات مباشرة عبر WhatsApp.
+                    </p>
+
+
+                    <div class="prices-hero-features">
+
+                        <span>
+                            ✓ إرسال سريع
+                        </span>
+
+                        <span>
+                            ✓ تنظيم واضح
+                        </span>
+
+                        <span>
+                            ✓ إرسال عبر WhatsApp
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO ICON -->
+
+                <div class="prices-hero-icon">
+                    💰
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PRICES CONTENT
+            ================================== -->
+
+            <section class="prices-layout">
+
+
+                <!-- =================================
+                     MAIN FORM CARD
+                ================================== -->
+
+                <div class="prices-card">
+
+
+                    <!-- CARD HEADER -->
+
+                    <div class="prices-card-top">
+
+                        <div class="prices-card-icon">
+                            💰
+                        </div>
+
+
+                        <div>
+
+                            <span class="prices-card-label">
+                                PRICE UPDATE
+                            </span>
+
+                            <h2>
+                                بيانات الأسعار
+                            </h2>
+
+                            <p>
+                                اختر القسم وأدخل المنتجات والأسعار المطلوبة.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         FORM
+                    ================================== -->
+
+                    <form id="pricesForm" class="prices-form">
+
+
+                        <!-- =================================
+                             SECTION
+                        ================================== -->
+
+                        <div class="form-group">
+
+
+                            <label>
+                                اختر القسم
+                            </label>
+
+
+                            <div class="section-options">
+
+
+                                <!-- CAFE -->
+
+                                <label class="section-option">
+
+                                    <input
+                                        type="radio"
+                                        name="priceSection"
+                                        value="الكافيه"
+                                        required
+                                    >
+
+                                    <span class="section-option-content">
+
+                                        <span class="section-option-icon">
+                                            ☕
+                                        </span>
+
+                                        <span>
+
+                                            <strong>
+                                                الكافيه
+                                            </strong>
+
+                                            <small>
+                                                Cafe
+                                            </small>
+
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+
+                                <!-- RESTAURANT -->
+
+                                <label class="section-option">
+
+                                    <input
+                                        type="radio"
+                                        name="priceSection"
+                                        value="المطعم"
+                                    >
+
+                                    <span class="section-option-content">
+
+                                        <span class="section-option-icon">
+                                            🍽️
+                                        </span>
+
+                                        <span>
+
+                                            <strong>
+                                                المطعم
+                                            </strong>
+
+                                            <small>
+                                                Restaurant
+                                            </small>
+
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+
+                                <!-- FACTORY -->
+
+                                <label class="section-option">
+
+                                    <input
+                                        type="radio"
+                                        name="priceSection"
+                                        value="المصنع"
+                                    >
+
+                                    <span class="section-option-content">
+
+                                        <span class="section-option-icon">
+                                            🏭
+                                        </span>
+
+                                        <span>
+
+                                            <strong>
+                                                المصنع
+                                            </strong>
+
+                                            <small>
+                                                Factory
+                                            </small>
+
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+
+                                <!-- GENERAL -->
+
+                                <label class="section-option">
+
+                                    <input
+                                        type="radio"
+                                        name="priceSection"
+                                        value="عام"
+                                    >
+
+                                    <span class="section-option-content">
+
+                                        <span class="section-option-icon">
+                                            📦
+                                        </span>
+
+                                        <span>
+
+                                            <strong>
+                                                عام
+                                            </strong>
+
+                                            <small>
+                                                General
+                                            </small>
+
+                                        </span>
+
+                                    </span>
+
+                                </label>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             PRODUCTS & PRICES
+                        ================================== -->
+
+                        <div class="form-group">
+
+
+                            <div class="label-row">
+
+                                <label>
+                                    المنتجات والأسعار
+                                </label>
+
+                                <span>
+                                    أضف المنتجات والسعر
+                                </span>
+
+                            </div>
+
+
+
+                            <!-- PRODUCTS LIST -->
+
+                            <div id="priceProducts" class="price-products">
+
+
+                                <!-- FIRST PRODUCT -->
+
+                                <div class="price-product-row">
+
+
+                                    <!-- PRODUCT NAME -->
+
+                                    <div class="price-input-group product-name-group">
+
+                                        <label>
+                                            اسم المنتج
+                                        </label>
+
+                                        <input type="text" class="price-product-name" placeholder="اسم المنتج" autocomplete="off">
+
+                                    </div>
+
+
+                                    <!-- PRICE -->
+
+                                    <div class="price-input-group product-price-group">
+
+                                        <label>
+                                            السعر
+                                        </label>
+
+                                        <div class="price-input-wrapper">
+
+                                            <input type="number" class="price-product-price" placeholder="0" min="0" step="0.01">
+
+                                            <span>
+                                                جنيه
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- REMOVE -->
+
+                                    <button type="button" class="remove-price-product" aria-label="حذف المنتج">
+                                        ×
+                                    </button>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- ADD PRODUCT -->
+
+                            <button type="button" id="addPriceProduct" class="add-price-product">
+
+                                <span>
+                                    ＋
+                                </span>
+
+                                <strong>
+                                    إضافة منتج
+                                </strong>
+
+                            </button>
+
+
+
+                            <!-- =================================
+                                 SUMMARY
+                            ================================== -->
+
+                            <div class="price-summary">
+
+
+                                <!-- COUNT -->
+
+                                <div class="price-summary-item">
+
+                                    <span class="summary-icon">
+                                        📦
+                                    </span>
+
+                                    <div>
+
+                                        <small>
+                                            عدد المنتجات
+                                        </small>
+
+                                        <strong id="priceProductsCount">
+                                            0
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- TOTAL -->
+
+                                <div class="price-summary-item">
+
+                                    <span class="summary-icon">
+                                        💰
+                                    </span>
+
+                                    <div>
+
+                                        <small>
+                                            إجمالي الأسعار
+                                        </small>
+
+                                        <strong>
+
+                                            <span id="priceProductsTotal">
+                                                0
+                                            </span>
+
+                                            جنيه
+
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- =================================
+                                 PREVIEW
+                            ================================== -->
+
+                            <div class="price-preview">
+
+
+                                <div class="price-preview-header">
+
+                                    <strong>
+                                        معاينة الأسعار
+                                    </strong>
+
+                                    <span id="previewSection">
+                                        لم يتم اختيار قسم
+                                    </span>
+
+                                </div>
+
+
+                                <div id="pricePreviewList" class="price-preview-list">
+
+                                    <div class="price-preview-empty">
+                                        أضف المنتجات والأسعار لتظهر هنا
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =================================
+                             SEND BUTTON
+                        ================================== -->
+
+                        <button type="button" class="prices-submit" id="sendPricesWhatsApp">
+
+                            <!-- SEND ICON -->
+
+                            <span class="send-icon">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path d="M22 2 11 13"></path>
+
+                                    <path d="m22 2-7 20-4-9-9-4Z"></path>
+
+                                </svg>
+
+                            </span>
+
+
+
+                            <!-- BUTTON TEXT -->
+
+                            <span class="send-content">
+
+                                <strong>
+                                    إرسال الأسعار
+                                </strong>
+
+                                <small>
+                                    سيتم فتح WhatsApp مباشرة
+                                </small>
+
+                            </span>
+
+
+
+                            <!-- ARROW -->
+
+                            <span class="send-arrow">
+                                ←
+                            </span>
+
+                        </button>
+
+
+                    </form>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         CART OVERLAY
+    ====================================== -->
+
+    <div id="cartOverlay">
+
+
+        <aside id="cartDrawer">
+
+
+            <!-- CART HEADER -->
+
+            <div class="cart-header">
+
+
+                <div class="cart-header-info">
+
+
+                    <div class="cart-header-icon">
+                        🛒
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            السلة
+                        </h2>
+
+                        <p>
+                            المنتجات المطلوبة
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <button id="cartClose" type="button" aria-label="إغلاق السلة">
+                    ×
+                </button>
+
+
+            </div>
+
+
+
+            <!-- CART ITEMS -->
+
+            <div id="cartItems"></div>
+
+
+
+            <!-- CART FOOTER -->
+
+            <div class="cart-footer">
+
+
+                <div class="cart-total">
+
+                    <span class="cart-total-label">
+                        إجمالي الكميات
+                    </span>
+
+                    <span id="cartTotalItems" class="cart-total-number">
+                        0
+                    </span>
+
+                </div>
+
+
+                <button id="sendOrder" type="button">
+                    📱 إرسال الطلب
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+    </div>
+
+
+
+    <!-- =====================================
+         TOAST
+    ====================================== -->
+
+    <div id="toast"></div>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="js/cart.js"></script>
+
+    <script src="js/whatsapp.js"></script>
+
+    <script src="js/prices.js"></script>
+
+    <script src="js/theme.js"></script>
+
+
+    <!-- =====================================
+         DIRECT PRICES WHATSAPP
+    ====================================== -->
+
+    <script>
+        document.addEventListener(
+            "DOMContentLoaded",
+            function() {
+
+                const sendButton =
+                    document.getElementById(
+                        "sendPricesWhatsApp"
+                    );
+
+
+                if (!sendButton) {
+                    return;
+                }
+
+
+                sendButton.addEventListener(
+                    "click",
+                    function() {
+
+
+                        /* =========================
+                           SECTION
+                        ========================= */
+
+                        const selectedSection =
+                            document.querySelector(
+                                'input[name="priceSection"]:checked'
+                            );
+
+
+                        if (!selectedSection) {
+
+                            alert(
+                                "من فضلك اختر القسم أولاً"
+                            );
+
+                            return;
+                        }
+
+
+                        /* =========================
+                           PRODUCTS
+                        ========================= */
+
+                        const rows =
+                            document.querySelectorAll(
+                                ".price-product-row"
+                            );
+
+
+                        const products = [];
+
+
+                        rows.forEach(
+                            function(row) {
+
+                                const nameInput =
+                                    row.querySelector(
+                                        ".price-product-name"
+                                    );
+
+
+                                const priceInput =
+                                    row.querySelector(
+                                        ".price-product-price"
+                                    );
+
+
+                                const name =
+                                    nameInput ?
+                                    nameInput.value.trim() :
+                                    "";
+
+
+                                const price =
+                                    priceInput ?
+                                    Number(
+                                        priceInput.value
+                                    ) :
+                                    0;
+
+
+                                if (
+                                    name &&
+                                    price > 0
+                                ) {
+
+                                    products.push({
+                                        name: name,
+                                        price: price
+                                    });
+
+                                }
+
+                            }
+                        );
+
+
+                        /* =========================
+                           CHECK PRODUCTS
+                        ========================= */
+
+                        if (products.length === 0) {
+
+                            alert(
+                                "من فضلك أضف منتج واحد على الأقل مع السعر"
+                            );
+
+                            return;
+                        }
+
+
+                        /* =========================
+                           TOTAL
+                        ========================= */
+
+                        const total =
+                            products.reduce(
+                                function(
+                                    sum,
+                                    product
+                                ) {
+
+                                    return (
+                                        sum +
+                                        product.price
+                                    );
+
+                                },
+                                0
+                            );
+
+
+                        /* =========================
+                           DATE & TIME
+                        ========================= */
+
+                        const now =
+                            new Date();
+
+
+                        const date =
+                            now.toLocaleDateString(
+                                "ar-EG", {
+                                    year: "numeric",
+                                    month: "2-digit",
+                                    day: "2-digit"
+                                }
+                            );
+
+
+                        const time =
+                            now.toLocaleTimeString(
+                                "ar-EG", {
+                                    hour: "2-digit",
+                                    minute: "2-digit"
+                                }
+                            );
+
+
+                        /* =========================
+                           PRODUCTS TEXT
+                        ========================= */
+
+                        const productsText =
+                            products
+                            .map(
+                                function(
+                                    product,
+                                    index
+                                ) {
+
+                                    return (
+                                        `${index + 1}️⃣ ` +
+                                        `*${product.name}* — ` +
+                                        `${product.price} جنيه`
+                                    );
+
+                                }
+                            )
+                            .join("\n");
+
+
+                        /* =========================
+                           MESSAGE
+                        ========================= */
+
+                        const message =
+
+                            `💰 *ڤولتا | VOLTA*
+
+📢 *تحديث أسعار المنتجات*
+━━━━━━━━━━━━━━━━━━
+
+📌 *القسم:* ${selectedSection.value}
+
+📋 *المنتجات والأسعار:*
+
+${productsText}
+
+━━━━━━━━━━━━━━━━━━
+
+📦 *عدد المنتجات:* ${products.length}
+
+💵 *إجمالي الأسعار:* ${total} جنيه
+
+📅 *التاريخ:* ${date}
+
+⏰ *الوقت:* ${time}
+
+━━━━━━━━━━━━━━━━━━
+
+✅ *تم إرسال الأسعار عبر نظام VOLTA*`;
+
+
+                        /* =========================
+                           WHATSAPP NUMBER
+                        ========================= */
+
+                        const phone =
+                            "201280061001";
+
+
+                        /* =========================
+                           WHATSAPP URL
+                        ========================= */
+
+                        const whatsappURL =
+                            "https://wa.me/" +
+                            phone +
+                            "?text=" +
+                            encodeURIComponent(
+                                message
+                            );
+
+
+                        /* =========================
+                           OPEN WHATSAPP
+                        ========================= */
+
+                        window.location.href =
+                            whatsappURL;
+
+                    }
+                );
+
+            }
+        );
+    </script>
+
+
+
+    <!-- =====================================
+         SERVICE WORKER
+    ====================================== -->
+
+    <script>
+        if (
+            "serviceWorker" in navigator
+        ) {
+
+            window.addEventListener(
+                "load",
+                function() {
+
+                    navigator.serviceWorker
+                        .register("./sw.js")
+                        .then(
+                            function() {
+
+                                console.log(
+                                    "Volta PWA Ready"
+                                );
+
+                            }
+                        )
+                        .catch(
+                            function(error) {
+
+                                console.error(
+                                    "Service Worker Error:",
+                                    error
+                                );
+
+                            }
+                        );
+
+                }
+            );
+
+        }
+    </script>
+
+
+</body>
+
+</html>

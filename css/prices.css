@@ -1,0 +1,1236 @@
+/* =========================================
+   VOLTA - PRICES PAGE
+========================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.prices-page {
+    min-height: calc(100vh - 80px);
+    padding: 30px 0 70px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.prices-page .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 24px;
+    padding: 9px 14px 9px 9px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+    box-shadow: 0 5px 18px rgba(40, 60, 80, 0.05);
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prices-page .back-link:hover {
+    color: var(--primary);
+    border-color: rgba(79, 126, 168, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 60, 80, 0.08);
+}
+
+.prices-page .back-icon {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 900;
+    transition: transform 0.2s ease;
+}
+
+.prices-page .back-link:hover .back-icon {
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.prices-hero {
+    position: relative;
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 24px;
+    padding: 30px 32px;
+    background: linear-gradient( 135deg, var(--bg-card) 0%, var(--primary-light) 100%);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.prices-hero::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: -90px;
+    bottom: -125px;
+    border-radius: 50%;
+    background: rgba(233, 139, 58, 0.08);
+    pointer-events: none;
+}
+
+.prices-hero::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: 28%;
+    top: -100px;
+    border-radius: 50%;
+    background: rgba(79, 126, 168, 0.06);
+    pointer-events: none;
+}
+
+.prices-hero-content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.prices-hero h1 {
+    margin: 7px 0 10px;
+    color: var(--text-main);
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+.prices-hero p {
+    max-width: 650px;
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   HERO FEATURES
+========================================= */
+
+.prices-hero-features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 17px;
+}
+
+.prices-hero-features span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 5px 11px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(79, 126, 168, 0.12);
+    border-radius: 9px;
+    color: var(--text-main);
+    font-size: 10px;
+    font-weight: 800;
+    backdrop-filter: blur(5px);
+}
+
+
+/* =========================================
+   HERO ICON
+========================================= */
+
+.prices-hero-icon {
+    position: relative;
+    z-index: 1;
+    width: 92px;
+    height: 92px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background: var(--accent-light);
+    border: 1px solid rgba(233, 139, 58, 0.12);
+    font-size: 40px;
+    box-shadow: 0 12px 30px rgba(233, 139, 58, 0.10);
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.prices-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 22px;
+    align-items: start;
+}
+
+
+/* =========================================
+   MAIN FORM CARD
+========================================= */
+
+.prices-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.prices-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient( 90deg, var(--accent), var(--primary));
+}
+
+.prices-card:hover {
+    box-shadow: 0 18px 45px rgba(40, 60, 80, 0.11);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.prices-card-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 20px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.prices-card-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: var(--primary-light);
+    border: 1px solid rgba(79, 126, 168, 0.08);
+    font-size: 24px;
+}
+
+.prices-card-label {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.prices-card-top h2 {
+    margin: 0 0 4px;
+    color: var(--text-main);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.prices-card-top p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.prices-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group>label {
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+
+/* =========================================
+   SECTION OPTIONS
+========================================= */
+
+.section-options {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.section-option {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.section-option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.section-option-content {
+    min-height: 86px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+}
+
+.section-option:hover .section-option-content {
+    transform: translateY(-2px);
+    border-color: rgba(79, 126, 168, 0.35);
+    box-shadow: 0 7px 18px rgba(40, 60, 80, 0.06);
+}
+
+.section-option input:focus-visible+.section-option-content {
+    outline: 3px solid rgba(79, 126, 168, 0.12);
+    outline-offset: 2px;
+}
+
+.section-option input:checked+.section-option-content {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    box-shadow: 0 7px 20px rgba(79, 126, 168, 0.11);
+}
+
+.section-option-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    font-size: 18px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.section-option:hover .section-option-icon {
+    transform: scale(1.04);
+}
+
+.section-option input:checked+.section-option-content .section-option-icon {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(79, 126, 168, 0.15);
+}
+
+.section-option-content>span:last-child {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.section-option strong {
+    color: var(--text-main);
+    font-size: 12px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.section-option small {
+    color: var(--text-muted);
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   PRICE DETAILS LABEL
+========================================= */
+
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.label-row label {
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.label-row span {
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.form-group textarea {
+    width: 100%;
+    min-height: 190px;
+    padding: 15px;
+    resize: vertical;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    outline: none;
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.9;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.65;
+}
+
+.form-group textarea:hover {
+    border-color: rgba(79, 126, 168, 0.25);
+}
+
+.form-group textarea:focus {
+    border-color: var(--primary);
+    background: var(--bg-card);
+    box-shadow: 0 0 0 3px rgba(79, 126, 168, 0.08);
+}
+
+.textarea-hint {
+    color: var(--text-muted);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.prices-submit {
+    width: 100%;
+    min-height: 62px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    border-radius: 15px;
+    background: var(--primary);
+    color: #fff;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 9px 22px rgba(79, 126, 168, 0.20);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prices-submit:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 13px 28px rgba(79, 126, 168, 0.28);
+}
+
+.prices-submit:active {
+    transform: scale(0.985);
+}
+
+.prices-submit:focus-visible {
+    outline: 3px solid rgba(79, 126, 168, 0.18);
+    outline-offset: 3px;
+}
+
+
+/* SEND ICON */
+
+.send-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.send-icon svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* SEND CONTENT */
+
+.send-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.send-content strong {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.send-content small {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 9px;
+}
+
+
+/* SEND ARROW */
+
+.send-arrow {
+    font-size: 21px;
+    font-weight: 900;
+    transition: transform 0.2s ease;
+}
+
+.prices-submit:hover .send-arrow {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   SIDE INFORMATION
+========================================= */
+
+.prices-side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================================
+   SIDE CARD
+========================================= */
+
+.prices-side-card {
+    position: relative;
+    padding: 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.prices-side-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+    transform: scaleY(0.5);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+}
+
+.prices-side-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(79, 126, 168, 0.25);
+    box-shadow: 0 13px 30px rgba(40, 60, 80, 0.09);
+}
+
+.prices-side-card:hover::before {
+    transform: scaleY(1);
+}
+
+
+/* =========================================
+   SIDE TOP
+========================================= */
+
+.side-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+
+/* NUMBER */
+
+.side-number {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+
+/* ICON */
+
+.side-icon {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: var(--accent-light);
+    font-size: 17px;
+}
+
+
+/* SIDE TEXT */
+
+.prices-side-card h3 {
+    margin: 0 0 6px;
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.prices-side-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .prices-hero-features span {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+}
+
+body.dark-mode .section-option-content {
+    background: rgba(255, 255, 255, 0.035);
+}
+
+body.dark-mode .section-option input:checked+.section-option-content {
+    background: rgba(79, 126, 168, 0.16);
+}
+
+body.dark-mode .section-option-icon {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .section-option input:checked+.section-option-content .section-option-icon {
+    background: rgba(255, 255, 255, 0.09);
+}
+
+body.dark-mode .form-group textarea {
+    background: rgba(255, 255, 255, 0.035);
+}
+
+body.dark-mode .form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .prices-page *,
+    .prices-page *::before,
+    .prices-page *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================
+   PRICES FORM - FULL WIDTH
+========================================= */
+
+.prices-layout {
+    width: 100%;
+    display: block;
+}
+
+.prices-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.prices-form {
+    width: 100%;
+}
+
+.prices-card-top {
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.section-options {
+    width: 100%;
+}
+
+.form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.prices-submit {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   PRICES - GLOBAL FONT SIZE BOOST
+========================================= */
+
+.prices-page {
+    font-size: 16px;
+}
+
+
+/* العنوان الرئيسي */
+
+.prices-hero h1 {
+    font-size: 42px;
+}
+
+.prices-hero p {
+    font-size: 15px;
+}
+
+
+/* الـ labels */
+
+.form-group>label,
+.label-row label {
+    font-size: 15px;
+}
+
+.label-row span {
+    font-size: 12px;
+}
+
+
+/* اختيارات الأقسام */
+
+.section-option strong {
+    font-size: 14px;
+}
+
+.section-option small {
+    font-size: 10px;
+}
+
+
+/* الكارت الرئيسي */
+
+.prices-card-top h2 {
+    font-size: 22px;
+}
+
+.prices-card-top p {
+    font-size: 13px;
+}
+
+.prices-card-label {
+    font-size: 10px;
+}
+
+
+/* مربع الكتابة */
+
+.form-group textarea {
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* النص أسفل مربع الكتابة */
+
+.textarea-hint {
+    font-size: 11px;
+}
+
+
+/* زر الإرسال */
+
+.send-content strong {
+    font-size: 15px;
+}
+
+.send-content small {
+    font-size: 10px;
+}
+
+
+/* رابط العودة */
+
+.prices-page .back-link {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   PRICE PRODUCTS SYSTEM
+========================================= */
+
+.price-products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* =========================================
+   PRODUCT ROW
+========================================= */
+
+.price-product-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px 42px;
+    gap: 12px;
+    align-items: end;
+    padding: 15px;
+    box-sizing: border-box;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.price-product-row:hover {
+    border-color: rgba(79, 126, 168, 0.3);
+    box-shadow: 0 7px 20px rgba(40, 60, 80, 0.06);
+}
+
+
+/* =========================================
+   INPUT GROUP
+========================================= */
+
+.price-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.price-input-group label {
+    color: var(--text-main);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.price-input-group input {
+    width: 100%;
+    height: 50px;
+    padding: 0 14px;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    outline: none;
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-input-group input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.65;
+}
+
+.price-input-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 126, 168, 0.08);
+}
+
+
+/* =========================================
+   PRICE INPUT
+========================================= */
+
+.price-input-wrapper {
+    position: relative;
+}
+
+.price-input-wrapper input {
+    padding-left: 65px;
+}
+
+.price-input-wrapper span {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 800;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   REMOVE BUTTON
+========================================= */
+
+.remove-price-product {
+    width: 42px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--bg-card);
+    color: #d65c5c;
+    font-size: 23px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.remove-price-product:hover {
+    background: #fff0f0;
+    border-color: #e6a0a0;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ADD PRODUCT
+========================================= */
+
+.add-price-product {
+    width: 100%;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px dashed rgba(79, 126, 168, 0.45);
+    border-radius: 13px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-price-product:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.add-price-product span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.add-price-product strong {
+    font-size: 13px;
+    font-weight: 900;
+}
+
+
+/* =========================================
+   PRICE SUMMARY
+========================================= */
+
+.price-summary {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.price-summary-item {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.summary-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: var(--primary-light);
+    font-size: 19px;
+}
+
+.price-summary-item small {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+.price-summary-item strong {
+    display: block;
+    color: var(--text-main);
+    font-size: 17px;
+    font-weight: 900;
+}
+
+
+/* =========================================
+   PRICE PREVIEW
+========================================= */
+
+.price-preview {
+    width: 100%;
+    padding: 17px;
+    box-sizing: border-box;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.price-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--border);
+}
+
+.price-preview-header strong {
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.price-preview-header span {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.price-preview-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-preview-item {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    border-bottom: 1px solid var(--border);
+}
+
+.preview-number {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.preview-name {
+    min-width: 0;
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.preview-price {
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.price-preview-empty {
+    padding: 20px 10px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.price-preview-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 14px;
+    margin-top: 3px;
+}
+
+.price-preview-total span {
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.price-preview-total strong {
+    color: var(--primary);
+    font-size: 17px;
+    font-weight: 900;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .price-product-row,
+body.dark-mode .price-summary-item,
+body.dark-mode .price-preview {
+    background: rgba(255, 255, 255, 0.035);
+}
+
+body.dark-mode .price-input-group input,
+body.dark-mode .remove-price-product {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .remove-price-product:hover {
+    background: rgba(214, 92, 92, 0.12);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+    .price-product-row {
+        grid-template-columns: minmax(0, 1fr) 42px;
+        gap: 10px;
+    }
+    .product-name-group {
+        grid-column: 1 / -1;
+    }
+    .product-price-group {
+        grid-column: 1;
+    }
+    .remove-price-product {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .price-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .price-product-row {
+        padding: 12px;
+    }
+    .price-input-group input {
+        height: 46px;
+        font-size: 13px;
+    }
+    .remove-price-product {
+        height: 46px;
+    }
+    .price-summary-item {
+        min-height: 68px;
+    }
+    .price-preview {
+        padding: 13px;
+    }
+    .price-preview-item {
+        grid-template-columns: 27px minmax(0, 1fr) auto;
+        gap: 7px;
+    }
+    .preview-name,
+    .preview-price {
+        font-size: 11px;
+    }
+}
